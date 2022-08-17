@@ -16,7 +16,7 @@ invitation=$(findy-agent-cli agent invitation --label $user -u --conn-id=$conn_i
 printf "\n\nHi Alice 👋 \n"
 printf "\nPlease read the QR code with your wallet application to prove your degree credential.\n\n"
 
-qrencode -m 2 -t utf8 <<< $invitation
+qrencode -m 2 -t utf8i <<< $invitation
 
 printf "\n$invitation\n"
 
