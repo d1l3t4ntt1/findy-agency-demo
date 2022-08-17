@@ -14,7 +14,7 @@ function login {
 
     export FCLI_CONFIG="./config.yaml"
 
-    register_res=$(findy-agent-cli authn register -u $user || "")
+    register_res=$(findy-agent-cli authn register -u $user || echo "")
     if [ -z "$register_res" ]; then
         issue=
     fi
