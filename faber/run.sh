@@ -6,13 +6,13 @@ current_dir=$(dirname "$BASH_SOURCE")
 
 source "$current_dir/../login.sh"
 
-user="Faber"
+user="faber@example.com"
 
 login $user "$current_dir/bot.yaml" "true"
 
 conn_id=$(echo $(uuidgen) | tr '[:upper:]' '[:lower:]')
 echo "Creating invitation with connection id $conn_id"
-invitation=$(findy-agent-cli agent invitation --label $user -u --conn-id=$conn_id)
+invitation=$(findy-agent-cli agent invitation --label "Faber" -u --conn-id=$conn_id)
 
 printf "\n\nHi there Alice 👋 \n"
 printf "\nCongratulations on your graduation 🎉 \n"

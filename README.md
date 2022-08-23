@@ -1,5 +1,8 @@
 # Findy Agency Demo
 
+
+[![Demo video](https://img.youtube.com/vi/rA2l0eW86Bs/0.jpg)](https://www.youtube.com/watch?v=rA2l0eW86Bs "Demo video")
+
 ## Prerequisities
 
 1. Setup agency to localhost according to [instructions](https://github.com/findy-network/findy-wallet-pwa/tree/dev/tools/env#agency-setup-for-local-development).
