@@ -6,12 +6,12 @@ current_dir=$(dirname "$BASH_SOURCE")
 
 source "$current_dir/../login.sh"
 
-user="Acme"
+user="acme@example.com"
 
 login $user "$current_dir/bot.yaml"
 
 conn_id=$(echo $(uuidgen) | tr '[:upper:]' '[:lower:]')
-invitation=$(findy-agent-cli agent invitation --label $user -u --conn-id=$conn_id)
+invitation=$(findy-agent-cli agent invitation --label "Acme" -u --conn-id=$conn_id)
 
 printf "\n\nHi Alice 👋 \n"
 printf "\nPlease read the QR code with your wallet application to prove your degree credential.\n\n"
