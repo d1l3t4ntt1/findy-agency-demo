@@ -14,8 +14,9 @@ function login {
 
     export FCLI_CONFIG="./config.yaml"
 
-    register_res=$(findy-agent-cli authn register -u $user || echo "")
+    register_res=$(findy-agent-cli authn register -u $user 2> /dev/null || echo "$register_res")
     if [ -z "$register_res" ]; then
+        # registration failed: no need for registration or cred-def creation
         issue=
     fi
     export FCLI_JWT=$(findy-agent-cli authn login -u $user)
